@@ -1,0 +1,15 @@
+arr = [1, 2, 3, 5, 7, 9, 11, 13, 15, 17]
+target = 12
+dic = {0: 10, 1: 2, 2: 3}
+for i, n in enumerate(arr):
+	if n == target:
+		print(f'{n} = target')
+
+	else:
+		dic[i] = n
+		for l in range(i):
+
+			if n + dic[l] == target:
+				print(f'{n} + {dic[l]} == target')
+				exit()
+		
